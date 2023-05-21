@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="taskContainer">
+        <a class="btn btn-primary addTaskButton" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          Add Tasks
+        </a>
+    </div>
+      <div class="collapse container containerTop" id="collapseExample">
+        <div class="card card-body">
+            <form [formGroup] = "formdata" class="row g-3 needs-validation addTaskForm" (ngSubmit)="validate($event, formdata.value)" novalidate="">
+                <div class="col-md-4 form-group required">
+                  <label for="validationCustom01" class="form-label">Title</label>
+                  <input type="text" formControlName="title" class="form-control" id="validationCustom01" required>
+                  <div class="valid-feedback">
+                        Looks good!
+                  </div>
+                  <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                <div class="col-md-4 form-group required">
+                  <label for="validationCustom02" class="form-label">Description</label>
+                  <textarea class="form-control" formControlName="description" maxlength="120" id="exampleFormControlTextarea1" rows="2" required></textarea>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                <div class="col-md-4 form-group required">
+                  <label for="validationCustomUsername" class="form-label">Due date</label>
+                    <input type="date" formControlName="date" class="form-control" id="validationCustom02" [min]="minDate" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary addTaskButton" type="submit">Add</button>
+                </div>
+              </form>
+        </div>
+      </div>
+</div>

@@ -1,0 +1,13 @@
+.taskContainer{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+.containerTop{
+    margin-top: 1rem;
+}
+
+.addTaskForm .form-label:after {
+    content:"*";
+    color:red;
+}

@@ -1,0 +1,23 @@
+<div class="py-5">
+    <div class="container">
+      <div class="row hidden-md-up">
+        <div class="col-md-4" *ngFor="let task of taskList">
+          <div class="card positionCard" [ngClass]="{'bgcompleted' :task.taskStatus}">
+            <div class="card-block">
+              <h4 class="card-title card-text-matcher">{{task.title}}</h4>
+              <div class="badge badge-secondary badge-color-red" [ngClass]="{'badge-color-green':task.taskStatus}">{{task.taskStatus ? 'Completed':'In Progress'}}</div>
+              <p class="card-text p-y-1 card-text-matcher">{{task.description}}</p>
+              <div class="d-flex justify-content-center gap-1">
+                <button [disabled]="task.taskStatus" type="button" (click)="markComplete(task._id, task.taskStatus)" class="btn btn-success">Mark as Complete</button>
+                <button type="button" class="btn btn-secondary" (click)="deleteTask(task._id)">Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="taskList.length==0" class="d-flex justify-content-center">
+          No records Found
+        </div>
+
+      </div>
+    </div>
+  </div>

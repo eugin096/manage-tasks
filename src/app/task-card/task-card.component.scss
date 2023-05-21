@@ -1,0 +1,23 @@
+.positionCard{
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    .card-text-matcher{
+        white-space: nowrap; 
+        width: 100%; 
+        overflow: hidden;
+        text-overflow: ellipsis; 
+    }
+}
+.gap-1{
+    gap: 1rem;
+}
+.badge-color-green{
+    background-color: green !important;
+}
+.bgcompleted{
+    background-color: darkgrey;
+}
+.badge-color-red{
+    background-color: red;
+}

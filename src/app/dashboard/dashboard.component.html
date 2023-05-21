@@ -1,0 +1,3 @@
+<app-header (searchTasks)="searchTasks($event)"></app-header>
+<app-add-task (addTasks)="addTasks($event)"></app-add-task>
+<app-task-card [taskList]="taskList" (updateTasks)="updateTasks($event)" (deleteTasks)="deleteTasks($event)"></app-task-card>
