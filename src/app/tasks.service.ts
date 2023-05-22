@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TasksService {
-  API_URL = "http://localhost:4001/"
+  API_URL = "https://manage-tasks-nhck.onrender.com/"
   headers = new HttpHeaders({
     'x-access-token':localStorage.getItem('AuthToken') as string
     // Add any additional headers if required
